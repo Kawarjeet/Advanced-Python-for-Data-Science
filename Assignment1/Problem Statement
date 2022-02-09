@@ -47,9 +47,13 @@ f(5) = 9
 (10pt) Write an iterative solution f_it() and time it for 𝑛=10,25,50,100.
 
 Problem 2. (70%)
-An astrophysicist colleague was recently complaining about how long it was taking to run an N-body simulation. “It’s really just a simple calculation, and I’m only simulating four planets, but it takes nearly a minute and a half to run one simulation. I really need it done in under 30 seconds.” You kindly offer to take a look at code to see if it is possible to speed it up. Your colleague provides you with a link to the source: https://nyu-cds.github.io/courses/code/nbody.py
+An astrophysicist colleague was recently complaining about how long it was taking to run an N-body simulation. “It’s really just a simple calculation, 
+and I’m only simulating four planets, but it takes nearly a minute and a half to run one simulation. I really need it done in under 30 seconds.” 
+You kindly offer to take a look at code to see if it is possible to speed it up. Your colleague provides you with a link to the 
+source: https://nyu-cds.github.io/courses/code/nbody.py
 
-Although your colleague said the code was simple, it is still fairly complex, so you decide to tackle the problem in stages. A first scan of the code reveals a number of potential areas that could be improved. These include:
+Although your colleague said the code was simple, it is still fairly complex, so you decide to tackle the problem in stages. A first scan of the code 
+reveals a number of potential areas that could be improved. These include:
 
 Reducing function call overhead
 
@@ -59,9 +63,12 @@ Using local rather than global variables
 
 Using data aggregation to reduce loop overheads.
 
-As you’re a cautious programmer, you decide to address each of these in turn. This will ensure that it is possible to check the program is still working correctly after each change, and to assess the performance improvement that the change achieved. You are also aware that the program has to be maintained by others in the future, so you want to make sure that the changes do not make this more difficult, especially if the performance improvement is only minor.
+As you’re a cautious programmer, you decide to address each of these in turn. This will ensure that it is possible to check the program is still working 
+correctly after each change, and to assess the performance improvement that the change achieved. You are also aware that the program has to be maintained 
+by others in the future, so you want to make sure that the changes do not make this more difficult, especially if the performance improvement is only minor.
 
-For each of these areas, create a new version of nbody.py, call them nbody_1.py, nbody_2.py, nbody_3.py, nbody_4.py. Finally, create another file called nbody_opt.py that contains all of the optimizations you made.
+For each of these areas, create a new version of nbody.py, call them nbody_1.py, nbody_2.py, nbody_3.py, nbody_4.py. Finally, create another file called 
+nbody_opt.py that contains all of the optimizations you made.
 
 Finally, generate a .pdf file with the four logs produced by the command in shell:
 
