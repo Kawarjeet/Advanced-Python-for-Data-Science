@@ -1,1 +1,70 @@
+Advanced Python for Data Science
+DS-GA-3001
 
+Homework Assignment 02
+Due date: Feb, 9 2021, 4:00PM
+
+Instructions for submitting solutions for assignment 2:
+Please submit only one zip file to NYU brightspace, which contains all your python solutions and one pdf file with all of your answers.
+
+The submitted zip-file name should be as "spring2022_sol02_nyuid.zip"
+
+e.g. If your nyuid is "ab1234", the submission is "spring2022_sol02_ab1234.zip"
+Problem 1. (30pt)
+Write a function f(n) to calculate the number of ways of representing 𝑛 as a sum of 1, 2, and 5, where the order of summands is important. For example:
+
+n = 1
+1 = 1
+f(1) = 1
+
+n = 2
+2 = 1 + 1
+2 = 2
+f(2) = 2
+
+n = 3
+3 = 1 + 1 + 1
+3 = 1 + 2
+3 = 2 + 1
+f(3) = 3
+
+n = 5
+5 = 1 + 1 + 1 + 1 + 1
+5 = 1 + 1 + 1 + 2
+5 = 1 + 1 + 2 + 1
+5 = 1 + 2 + 1 + 1
+5 = 2 + 1 + 1 + 1
+5 = 2 + 2 + 1
+5 = 2 + 1 + 2
+5 = 1 + 2 + 2
+5 = 5
+f(5) = 9
+
+(10pt) Write a recursive solution f_rec() without memoization and time it for 𝑛=10,25.
+
+(10pt) Write a recursive solution with memoization or a wrapper function f_memo() and time it for 𝑛=10,25,50,100.
+
+(10pt) Write an iterative solution f_it() and time it for 𝑛=10,25,50,100.
+
+Problem 2. (70%)
+An astrophysicist colleague was recently complaining about how long it was taking to run an N-body simulation. “It’s really just a simple calculation, and I’m only simulating four planets, but it takes nearly a minute and a half to run one simulation. I really need it done in under 30 seconds.” You kindly offer to take a look at code to see if it is possible to speed it up. Your colleague provides you with a link to the source: https://nyu-cds.github.io/courses/code/nbody.py
+
+Although your colleague said the code was simple, it is still fairly complex, so you decide to tackle the problem in stages. A first scan of the code reveals a number of potential areas that could be improved. These include:
+
+Reducing function call overhead
+
+Using alternatives to membership testing of lists
+
+Using local rather than global variables
+
+Using data aggregation to reduce loop overheads.
+
+As you’re a cautious programmer, you decide to address each of these in turn. This will ensure that it is possible to check the program is still working correctly after each change, and to assess the performance improvement that the change achieved. You are also aware that the program has to be maintained by others in the future, so you want to make sure that the changes do not make this more difficult, especially if the performance improvement is only minor.
+
+For each of these areas, create a new version of nbody.py, call them nbody_1.py, nbody_2.py, nbody_3.py, nbody_4.py. Finally, create another file called nbody_opt.py that contains all of the optimizations you made.
+
+Finally, generate a .pdf file with the four logs produced by the command in shell:
+
+for f in nbody_*.py; do python -m cProfile -s cumulative $f; done
+
+How much speedup do you get (time_original/time_optimized)?
